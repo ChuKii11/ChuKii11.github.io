@@ -1,25 +1,179 @@
 <!DOCTYPE html>
-<html lang=“en”>
+<html lang="en">
 <head>
-    <meta charset=“UTF-8” />
-    <title>Hello, world!</title>
-    <link rel=“stylesheet” href=“css/styles.css”>
-    <meta name=“viewport” content=“width=device-width,initial-scale=1”>
-    <meta name=“description” content=“” />
-    <link rel=“icon” href=“favicon.png”>
+<meta charset="UTF-8" />
+<title>Highlight</title>
+<style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0e0220;
+      color: white;
+      text-align: center;
+    }
+    .site-logo {
+  width: 80px;   
+  height: auto;
+  vertical-align: middle;
+}
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: #0e0220;
+    }
+
+    .navbar-left {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .navbar-left a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+    }
+
+    .navbar-left a:hover {
+      text-decoration: underline;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .navbar-right button {
+      background-color: white;
+      color: #0e0220;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .highlights {
+      margin-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    .highlights h1 {
+      font-size: 48px;
+      font-weight: 800;
+      margin-bottom: 50px;
+    }
+
+    .highlight-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 0 80px;
+    }
+
+    .highlight-card {
+      background-color: #1c0b3c;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s;
+    }
+
+    .highlight-card:hover {
+      transform: scale(1.05);
+    }
+
+    .highlight-thumb {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .highlight-content {
+      padding: 20px;
+    }
+
+    .highlight-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .highlight-desc {
+      font-size: 14px;
+      color: #d2c8ff;
+      margin-bottom: 15px;
+    }
+
+    .highlight-btn {
+      background-color: white;
+      color: #0e0220;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      .highlights h1 {
+        font-size: 36px;
+      }
+      .highlight-list {
+        padding: 0 30px;
+      }
+    }
+  </style>
+
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="description" content="" />
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <nav>
-    <ul>
-    <li><a href=“index.html”>Home</a></li>
-    <li><a href=“project1.html”>Project 1</a></li>
-    <li><a href=“project2.html”>Project 2</a></li>
-    <li><a href=“project3.html”>Project 3</a></li>
-    <li><a href=“project4.html”>Project 4</a></li>
-    <li><a href=“project5.html”>Project 5</a></li>
-    </ul>
-    </nav>
-<h1>My project 3</h1>
-<p>Content for Project 3</p>
+    <div class="flex-container"></div>
+<div class="flex-container">
+        <a href="index.html"> <img src="https://media.istockphoto.com/id/183852647/photo/soccer-ball.jpg?s=612x612&w=0&k=20&c=L33flNntld6Okw_tQxrggSoWBfWQD1WWs-qYUklhERQ=" class="site-logo" ></a>
+    <a href="project1.html">Matches</a>
+<a href="project2.html">Live scores</a>
+<a href="project3.html">Highlights</a>
+<a href="project4.html">News</a>
+<a href="project5.html">Your favorite</a>
+<button class="settings-btn">Settings →</button>
+</div>
+<section class="highlights">
+    <h1>Football Highlights</h1>
+    <div class="highlight-list">
+      <div class="highlight-card">
+        <img src="https://i.ytimg.com/vi/lrA_9Lx-0nU/maxresdefault.jpg" class="highlight-thumb" alt="Highlight 1">
+        <div class="highlight-content">
+          <div class="highlight-title">CHE vs LIV - Top Goals</div>
+          <div class="highlight-desc">The most impressive goals and beautiful long shots in the match.</div>
+          <button class="highlight-btn">Watch now</button>
+        </div>
+      </div>
+
+      <div class="highlight-card">
+        <img src="https://cf-images.eu-west-1.prod.boltdns.net/v1/static/10228001001/5c111476-28ca-4ff1-92ca-a340406c86f3/a48f6d6a-7758-46cd-9e32-c75683f0e75f/4000x2250/match/image.jpg" class="highlight-thumb" alt="Highlight 2">
+        <div class="highlight-content">
+          <div class="highlight-title">MCI vs MUN - Skills & Tricks</div>
+          <div class="highlight-desc">World class technical handling and thrilling situations on the field.</div>
+          <button class="highlight-btn">Watch now</button>
+        </div>
+      </div>
+
+      <div class="highlight-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi3ntOg8G6-1Pkzti0riuU5J2R7xcE8uOlsA&s" class="highlight-thumb" alt="Highlight 3">
+        <div class="highlight-content">
+          <div class="highlight-title">Costa rica vs USMNT - Best Saves</div>
+          <div class="highlight-desc">Great saves from the goalkeeper and solid defense.</div>
+          <button class="highlight-btn">Watch now</button>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
+
