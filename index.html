@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<title>Matches</title>
+<title>Hello, world!</title>
 <style>
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
+      padding: 0;
       background-color: rgb(19, 7, 46);
       color: white;
-      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     .site-logo {
   width: 80px;   
@@ -17,129 +17,121 @@
   vertical-align: middle;
 }
 
-    .navbar {
+    .wrapper {
+  width: 100%;
+  padding: 30px 50px; 
+  box-sizing: border-box;
+}
+
+    .top-nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 60px;
-      background-color: rgb(19, 7, 46);
     }
-
-    .navbar-left {
-      display: flex;
-      align-items: center;
-      gap: 40px;
-    }
-
-    .navbar-left a {
-      text-decoration: none;
-      color: white;
-      font-weight: 500;
-    }
-
-    .navbar-left a:hover {
-      text-decoration: underline;
-    }
-
     .logo {
-      font-weight: 700;
-      font-size: 18px;
-    }
-
-    .navbar-right button {
-      background-color: white;
-      color: rgb(19, 7, 46);
-      border: none;
-      padding: 10px 20px;
-      border-radius: 25px;
-      cursor: pointer;
-      font-weight: 500;
-    }
-
-    .matches {
-      margin-top: 60px;
-      padding-bottom: 60px;
-    }
-
-    .matches h1 {
-      font-size: 48px;
-      font-weight: 800;
-      margin-bottom: 50px;
-    }
-
-    .match-list {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-    }
-
-    .match-card {
-      width: 65%;
-      background-color: #1c0b3c;
-      border-radius: 20px;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-      transition: transform 0.3s;
-    }
-
-    .match-card:hover {
-      transform: scale(1.05);
-    }
-
-    .teams {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      font-weight: 600;
-      font-size: 18px;
-    }
-
-    .teams img {
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-
-    .vs {
-      font-size: 22px;
-      color: #ffd700;
+      font-size: 1.3rem;
       font-weight: bold;
     }
-
-    .match-info {
-      text-align: right;
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    .settings-btn {
+      background-color: white;
+      color:rgb(19, 7, 46);
+      padding: 8px 20px;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
     }
 
-    .date {
-      font-size: 16px;
-      color: #d2c8ff;
-      margin-bottom: 8px;
+    .title {
+      font-size: 2.4rem;
+      margin: 40px 0 30px 0;
     }
 
-    .match-btn {
+    table {
+      width: 100%;
+      border-spacing: 25px;
+      table-layout: fixed;
+    }
+    td {
+      vertical-align: top;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #240046, #3c096d);
+      border-radius: 18px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      height: 220px;
+    }
+    .card .tag {
+      display: inline-block;
+      background-color: #b197fc;
+      color: rgb(19, 7, 46);
+      padding: 5px 12px;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+    .card h2 {
+      margin: 0 0 10px 0;
+      font-size: 1.4rem;
+    }
+    .card p {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    .signup {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .signup-btn {
       background-color: white;
       color: rgb(19, 7, 46);
+      padding: 14px 32px;
       border: none;
-      padding: 8px 16px;
       border-radius: 25px;
-      cursor: pointer;
-      font-weight: 500;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .signup-btn::after {
+      content: "→";
+      font-size: 1.2rem;
     }
 
-    @media (max-width: 768px) {
-      .match-card {
-        width: 85%;
-        flex-direction: column;
-        gap: 15px;
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
       }
-
-      .matches h1 {
-        font-size: 36px;
+      .top-nav {
+        justify-content: space-between;
+      }
+      table {
+        display: block;
+      }
+      tr {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .card {
+        height: auto;
       }
     }
   </style>
@@ -149,8 +141,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="flex-container"></div>
-<div class="flex-container">
+    <div class="flex-container">
        <a href="index.html"> <img src="https://media.istockphoto.com/id/183852647/photo/soccer-ball.jpg?s=612x612&w=0&k=20&c=L33flNntld6Okw_tQxrggSoWBfWQD1WWs-qYUklhERQ=" class="site-logo" ></a>
     <a href="project1.html">Matches</a>
 <a href="project2.html">Live scores</a>
@@ -159,52 +150,46 @@
 <a href="project5.html">Your favorite</a>
 <button class="settings-btn">Settings →</button>
 </div>
-<section class="matches">
-    <h1>Upcoming Matches</h1>
 
-    <div class="match-list">
-      <div class="match-card">
-        <div class="teams">
-          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/1200px-Manchester_City_FC_badge.svg.png" alt="MNC">
-          <span>MNC</span>
-          <div class="vs">vs</div>
-          <span>MUN</span>
-          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/1184px-Manchester_United_FC_crest.svg.png" alt="MUN">
-        </div>
-        <div class="match-info">
-          <div class="date">📅 20:00 | 14/10/2025</div>
-          <button class="match-btn">View More</button>
-        </div>
-      </div>
+  <h1>For You</h1>
 
-      <div class="match-card">
-        <div class="teams">
-          <img src="https://upload.wikimedia.org/wikipedia/vi/thumb/c/c7/Logo_Real_Madrid.svg/140px-Logo_Real_Madrid.svg.png" alt="RMA">
-          <span>RMA</span>
-          <div class="vs">vs</div>
-          <span>BAR</span>
-          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/230px-FC_Barcelona_%28crest%29.svg.png" alt="BAR">
+  <table>
+    <tr>
+      <td>
+        <div class="card">
+          <div class="tag">Clubs</div>
+          <h2>Your favorite club</h2>
+          <p>News about club</p>
         </div>
-        <div class="match-info">
-          <div class="date">📅 18:30 | 15/10/2025</div>
-          <button class="match-btn">View More</button>
+      </td>
+      <td>
+        <div class="card">
+          <div class="tag">Tables</div>
+          <h2>Standings</h2>
+          <p>
+            List of teams<br>
+            1.<br>
+            2.<br>
+            3.
+          </p>
         </div>
-      </div>
+      </td>
+      <td>
+        <div class="card">
+          <div class="tag">Schedule</div>
+          <h2>Date</h2>
+          <p>
+            Matches:<br>
+            Team 1 vs Team 3<br>
+            Team 2 vs Team 4<br>
+            Team 5 vs Team 7
+          </p>
+        </div>
+      </td>
+    </tr>
+  </table>
 
-      <div class="match-card">
-        <div class="teams">
-          <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg" alt="LIV">
-          <span>LIV</span>
-          <div class="vs">vs</div>
-          <span>ARS</span>
-          <img src="https://upload.wikimedia.org/wikipedia/vi/thumb/5/53/Arsenal_FC.svg/1023px-Arsenal_FC.svg.png" alt="ARS">
-        </div>
-        <div class="match-info">
-          <div class="date">📅 21:00 | 16/10/2025</div>
-          <button class="match-btn">View More</button>
-        </div>
-      </div>
-    </div>
-  </section>
-</body>
+  <div class="signup-wrapper">
+    <a href="#" class="signup-btn">Sign up</a>
+  </div>
 </html>
